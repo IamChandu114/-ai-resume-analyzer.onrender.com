@@ -5,7 +5,7 @@ import pdfplumber
 import openai
 
 # Initialize Flask app
-app = Flask(__name__, template_folder="templates")  # Ensure it points to your templates folder
+app = Flask(__name__, template_folder="index.html")  # Ensure it points to your index.html folder
 
 # Load skills JSON if needed
 SKILLS_FILE = "skills.json"
@@ -66,6 +66,7 @@ def analyze_resume(text):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
+
 
 
 
